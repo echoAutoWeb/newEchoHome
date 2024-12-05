@@ -35,6 +35,7 @@
             border-radius: calc(24 / 16 * 1em);
             /* clips img tag corners */
             overflow: hidden;
+
             img {
                 position: absolute;
                 top: 0;
@@ -75,7 +76,6 @@
         }
 
         .cs-title {
-            max-width: calc(800 / 16 * 1rem);
             text-align: left;
         }
 
@@ -164,6 +164,7 @@
     body.dark-mode {
         #sbs {
             .cs-left {
+
                 &:before,
                 &:after {
                     background: var(--accent);

@@ -755,17 +755,6 @@
     width: auto;
   }
 }
-/* Inbetween - 600px */
-@media only screen and (min-width: 37.5em) {
-  #cs-footer .cs-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    /* 48px - 60px */
-    column-gap: clamp(3em, 5.9vw, 3.75em);
-  }
-}
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #cs-footer .cs-logo-group {

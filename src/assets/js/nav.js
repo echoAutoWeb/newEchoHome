@@ -100,3 +100,14 @@ document.addEventListener("keydown", (event) => {
         toggleMenu();
     }
 });
+
+//
+window.addEventListener("scroll", function() {
+    const navigation = document.getElementById('cs-navigation');
+    if (window.scrollY > 32) { // Adjust the scroll threshold as needed
+      navigation.classList.add('scrolled');
+    } else {
+      navigation.classList.remove('scrolled');
+    }
+  });
+

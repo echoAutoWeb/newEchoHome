@@ -15,6 +15,7 @@
     font-family: "Roboto", "Arial", sans-serif;
     /* Centers button */
     text-align: center;
+    transition: padding 0.6s;
   }
   #hero .cs-picture {
     z-index: -2;
@@ -50,41 +51,37 @@
     /* prevents the cursor from interacting with it */
     pointer-events: none;
   }
+  #hero .notebook-img img {
+    max-width: 100%;
+    max-height: 100%;
+  }
   #hero .cs-container {
     position: relative;
     margin: auto;
     max-width: 80em;
     width: 100%;
-    /* we put the padding top and bottom on the container instead of #Hero so the pseudo element lines go to the top and bottom of the section */
-    /* 144px - 280px - leaving extra space for the navigation */
-    /* changes on tablet */
     padding: clamp(9em, 25.95vw, 17.5em) 0;
+    padding-bottom: 0px;
   }
   #hero .cs-container:before {
     position: absolute;
     top: 0;
     left: 0;
-    /* Left Line */
     content: "";
     opacity: 1;
     display: block;
-    background: -moz-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%); /* Chrome10-25,Safari5.1-6 */
     height: 100%;
-    width: 1px;
   }
   #hero .cs-flex-group {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
+    width: 100%;
+    max-width: 80rem;
     margin: auto;
-    /* 60px - 220px */
-    margin-bottom: clamp(3.75em, 15.5vw, 13.75em);
-    /* 464px - 562px */
-    max-width: clamp(29em, 60vw, 35.125em);
-    width: 80vw;
-    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
   }
   #hero .cs-topper {
     margin-bottom: 1rem;
@@ -109,18 +106,17 @@
     height: initial;
     line-height: clamp(2.875em, 5.5vw, 3.5em);
   }
-  #hero .cs-button-transparent {
+  #hero .cs-button-solid {
     z-index: 1;
     position: relative;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     border: 1px solid var(--bodyTextColorWhite);
-    margin: 0 0.5rem;
     background-color: transparent;
     /* 46px - 56px */
     height: clamp(2.875em, 5.5vw, 3.5em);
-    width: 11.25rem;
+    width: 9.375rem;
     box-sizing: border-box;
     padding: 0;
     text-decoration: none;
@@ -130,11 +126,7 @@
     font-weight: 700;
     color: #fff;
   }
-  #hero .cs-button-transparent .cs-img {
-    display: block;
-    margin-right: 0.75rem;
-  }
-  #hero .cs-button-transparent:before {
+  #hero .cs-button-solid:before {
     z-index: -1;
     position: absolute;
     /* so it sits on top of the border */
@@ -151,39 +143,42 @@
     transition: transform 0.3s;
     transform-origin: left;
   }
-  #hero .cs-button-transparent:hover:before {
+  #hero .cs-button-solid:hover:before {
     transform: scaleX(1);
   }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #hero {
-    /* 32px - 40px */
     padding: 0 clamp(2em, 5vw, 2.5em);
-  }
-  #hero .cs-container {
-    padding: clamp(7em, 27.95vw, 17.5em) 0 clamp(9em, 30.95vw, 23.5em) 0;
   }
   #hero .cs-container:after {
     position: absolute;
     top: 0;
     right: 0;
-    /* Right Line */
     content: "";
     opacity: 1;
     display: block;
-    background: -moz-linear-gradient(top, rgba(250, 251, 252, 0) 0%, rgba(250, 251, 252, 0.5) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(250, 251, 252, 0) 0%, rgba(250, 251, 252, 0.5) 100%); /* Chrome10-25,Safari5.1-6 */
     height: 100%;
-    width: 1px;
   }
   #hero .cs-button-solid {
     margin-right: 1.25rem;
     margin-bottom: 0;
   }
+  #hero .cs-flex-group {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+  }
 }
 /* Desktop Parallax Effect - 1300px */
-@media only screen and (min-width: 81.25em) {
+@media only screen and (min-width: 90em) {
   #hero {
     background: url("/assets/images/landing.jpg");
     background-position: center;
@@ -202,96 +197,294 @@
 /*-- -------------------------- -->
 <---          Services          -->
 <--- -------------------------- -*/
-/* Mobile */
+/* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  .services {
-    z-index: 100;
-    position: relative;
-    border-top: 0.375em solid var(--primary);
-    border-radius: 0.3125em;
-    margin: auto;
-    margin-top: -10.4375em;
-    margin-bottom: 3.125em;
-    background: #fff;
-    max-width: 82.5em;
-    width: 90%;
-    padding: 3.125em 1.25em;
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+  #services-1188 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px 30px;
+    padding: var(--sectionPadding);
+    padding-bottom: 0px;
+    align-items: center;
   }
-  .services .card {
-    display: block;
-    margin: auto;
-    margin-bottom: 3.125em;
-    max-width: 22.3125em;
+  #services-1188 .cs-container {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 30px;
+    background-color: #2c67b0;
+    padding: var(--sectionPadding);
+    box-sizing: border-box;
+  }
+  #services-1188 .cs-container-google-meu-negocio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 30px;
+    background-color: white;
+  }
+  #services-1188 .cs-container-google-meu-negocio .cs-text {
+    max-width: unset;
+  }
+  #services-1188 .cs-content {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-  .services .card picture {
+  #services-1188 .cs-card-group {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    gap: 30px 30px;
+  }
+  #services-1188 .cs-item {
+    list-style: none;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px 16px;
+  }
+  #services-1188 .cs-item .cs-topper {
+    width: 100%;
+    text-align: right;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    text-decoration: none;
+    margin-top: auto;
+  }
+  #services-1188 .cs-item .cs-text-group {
+    display: flex;
+    flex-direction: column;
+    gap: auto;
+    align-items: center;
+  }
+  #services-1188 .cs-item .cs-text-group .cs-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--headerColor);
+    text-align: center;
+  }
+  #services-1188 .cs-item .cs-button-solid {
+    margin-top: 32px !important;
+  }
+  #services-1188 .cs-picture {
+    width: 5rem;
+    height: 5rem;
+    box-sizing: border-box;
+    /* prevents border from affecting height and width */
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    margin: auto;
-    margin-bottom: 1.4375em;
-    background: var(--primary);
-    height: 5.5em;
-    width: 5.5em;
+    position: relative;
+    /* prevents flexbox from squishing it */
+    flex: none;
   }
-  .services .card picture img {
-    height: 3em;
-    width: 3em;
+  #services-1188 .cs-picture img {
+    width: 80px;
+    height: 80px;
   }
-  .services .card h2 {
-    margin-bottom: 0.65em;
-    font-size: 2em;
-    line-height: 1.35em;
-    font-weight: 700;
-    color: #1a1a1a;
-    text-align: center;
-  }
-  .services .card p {
-    opacity: 0.7;
-    width: 100%;
-    line-height: 1.3333333333em;
-    text-align: center;
-  }
-  .services .card:last-of-type {
-    margin-bottom: 0;
-  }
-}
-/* Inbetween */
-@media only screen and (min-width: 768px) {
-  .services {
+  #services-1188 .cs-picture-google-business {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 98%;
-    font-size: min(1.8vw, 1em);
+    flex-direction: column;
+    width: 100%;
+    gap: 30px 30px;
   }
-  .services .card {
+  #services-1188 .cs-picture-google-business img {
+    width: 100%;
+  }
+  #services-1188 .cs-icon {
+    width: 1.875rem;
+    height: auto;
+    display: block;
+  }
+  #services-1188 .cs-h3 {
+    font-size: 1.25rem;
+    line-height: 1.5em;
     margin: 0;
-    max-width: 20.3125em;
+    margin-bottom: 0.5rem;
+    color: var(--headerColor);
+    text-align: center;
+  }
+  #services-1188 .cs-item-text {
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+    text-align: center;
   }
 }
-/* Large Desktop */
-@media only screen and (min-width: 1300px) {
-  .services {
-    padding: 3.125em 5em;
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #services-1188 .cs-card-group {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
   }
-  .services .card {
-    max-width: 22.3125em;
+  #services-1188 .cs-item {
+    margin: 0;
+    gap: 16px 16px;
+  }
+  #services-1188 .cs-container-google-meu-negocio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px 16px;
+    background-color: white;
+  }
+  #services-1188 .cs-container-google-meu-negocio .cs-text {
+    max-width: unset;
+  }
+  #services-1188 .cs-button-transparent {
+    text-wrap: nowrap;
+    overflow: unset;
   }
 }
-/* Dark mode */
+/* Small Desktop */
+@media only screen and (min-width: 64rem) {
+  #services-1188 .cs-container-google-meu-negocio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px 20px;
+    background-color: white;
+  }
+  #services-1188 .cs-container {
+    gap: 24px 24px;
+  }
+  #services-1188 .cs-item .cs-text-group {
+    gap: 16px 16px;
+  }
+  #services-1188 .cs-item {
+    padding: 12px;
+  }
+  #services-1188 .cs-container-google-meu-negocio .cs-text {
+    max-width: unset;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+    opacity: 0.9;
+  }
+  #services-1188 .cs-title {
+    text-align: left;
+    font-size: 40px;
+    line-height: 40px;
+  }
+  #services-1188 .cs-text {
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+    opacity: 0.9;
+  }
+  #services-1188 .cs-button-transparent {
+    text-wrap: nowrap;
+    overflow: unset;
+  }
+  #services-1188 .cs-card-group {
+    max-width: unset;
+  }
+  #services-1188 .cs-picture img {
+    width: 64px;
+    height: 64px;
+  }
+}
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 90rem) {
+  #services-1188 .cs-card-group {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  #services-1188 .cs-item {
+    padding: 16px;
+    padding-top: 24px;
+  }
+  #services-1188 .cs-item .cs-text-group {
+    gap: unset;
+  }
+  #services-1188 .cs-container-google-meu-negocio {
+    gap: 20px 20px;
+    max-width: 120rem;
+  }
+  #services-1188 .cs-container {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    display: flex;
+    flex-direction: unset;
+    align-items: center;
+    gap: 30px 30px;
+    background-color: #2c67b0;
+    padding: var(--sectionPadding);
+    padding-left: 16%;
+    padding-right: 16%;
+  }
+  #services-1188 .cs-content {
+    width: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: center;
+  }
+  #services-1188 .cs-title {
+    white-space: nowrap;
+    text-align: left;
+    font-size: 22px;
+    line-height: 24px;
+  }
+  #services-1188 .cs-title.white {
+    filter: invert(1);
+    font-size: 32px;
+    line-height: 32px;
+    text-align: right;
+  }
+  #services-1188 .cs-text.white {
+    filter: invert(1);
+    text-align: right;
+  }
+  #services-1188 .cs-item .cs-topper {
+    text-align: right;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: auto;
+    margin-bottom: unset;
+  }
+  #services-1188 .cs-text {
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    opacity: 0.9;
+  }
+}
+/* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #services {
-    background: var(--medium);
+  body.dark-mode #services-1188 .cs-topper {
+    color: var(--primaryLight);
   }
-  body.dark-mode #services picture {
-    background: var(--primaryDark);
+  body.dark-mode #services-1188 .cs-item {
+    background-color: var(--medium);
   }
-  body.dark-mode #services h2 {
-    font-weight: bold;
-    color: #fff;
+  body.dark-mode #services-1188 .cs-text,
+  body.dark-mode #services-1188 .cs-item-text {
+    opacity: 0.8;
+  }
+  body.dark-mode #services-1188 .cs-picture {
+    background-color: var(--accent);
+  }
+  body.dark-mode #services-1188 .cs-icon {
+    /* turns it white */
+    filter: grayscale(1) brightness(1000%);
+  }
+  body.dark-mode #services-1188 .cs-title,
+  body.dark-mode #services-1188 .cs-text,
+  body.dark-mode #services-1188 .cs-h3,
+  body.dark-mode #services-1188 .cs-item-text {
+    color: var(--bodyTextColorWhite);
   }
 }
 

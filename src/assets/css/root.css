@@ -13,12 +13,11 @@
     --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #fafbfc;
     /* 13px - 16px */
-    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    --topperFontSize: clamp(1rem, 2vw, 1.5rem);
     /* 31px - 49px */
-    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --headerFontSize: clamp(1.6375rem, 3.9vw, 3.0625rem);
     --bodyFontSize: 1rem;
-    /* 60px - 100px top and bottom */
-    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+    --sectionPadding: 30px 10px 30px 10px;
   }
   .cs-topper {
     display: block;
@@ -28,18 +27,23 @@
     font-size: var(--topperFontSize);
     line-height: 1.2em;
     font-weight: 700;
-    color: var(--primary);
+    color: #2c67b0;
     text-align: inherit;
   }
   .cs-title {
     position: relative;
-    margin: 0 0 1rem 0;
-    max-width: 43.75rem;
-    font-size: var(--headerFontSize);
-    line-height: 1.2em;
-    font-weight: 900;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
     color: var(--headerColor);
-    text-align: inherit;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .cs-title.white {
+    filter: invert(1);
+  }
+  .cs-title.blue {
+    color: #2c67b0;
   }
   .cs-text {
     margin: 0;
@@ -50,322 +54,137 @@
     color: var(--bodyTextColor);
     text-align: inherit;
   }
-  .cs-button-solid {
-    z-index: 1;
-    position: relative;
-    display: inline-block;
-    background-color: var(--primary);
-    width: auto;
-    padding: 0 1.875rem;
+  .cs-text.white {
+    filter: invert(1);
+  }
+  .cs-text.white.quote {
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.055);
+    font-size: 24px;
+    font-style: italic;
+  }
+  .cs-button-contact {
+    display: flex;
+    align-items: center;
+    background-color: #29a71a;
+    gap: 4px 4px;
+    border-radius: 32px;
+    padding: 8px;
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1rem;
-    line-height: 3.125em;
-    font-weight: bold;
-    color: #000;
-    transition: color 0.3s;
-    transition-delay: 0.1s;
+    padding: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    transition: all 0.1s ease-in-out;
+  }
+  .cs-button-contact-text {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+  }
+  .cs-button-contact img {
+    width: 32px;
+    height: 32px;
+  }
+  .cs-button-solid {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    display: inline-flex;
+    overflow: hidden;
+    padding-bottom: 18px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 18px;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
     text-align: center;
+    text-decoration: none;
+    text-decoration-color: white;
+    vertical-align: middle;
+    white-space-collapse: collapse;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: all 0.1s ease-in-out;
   }
   .cs-button-solid:hover {
-    color: #fff;
+    text-decoration-color: black;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    transition: all 0.1s ease-in-out;
   }
-  .cs-button-solid:hover:before {
-    width: 100%;
-  }
-  .cs-button-solid:before {
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    opacity: 1;
-    display: block;
-    background-color: #000;
-    height: 100%;
-    width: 0;
-    transition: width 0.3s;
-  }
-  .cs-hide-on-mobile {
-    display: none;
-  }
-}
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-  .cs-hide-on-mobile {
-    display: block;
-  }
-  .cs-hide-on-desktop {
-    display: none;
-  }
-}
-/* Fonts and general styles */
-@media only screen and (min-width: 0rem) {
-  body,
-  html {
-    margin: 0;
-    overflow-x: hidden;
-    padding: 0;
-    font-family: "Roboto", Arial, sans-serif;
-    font-size: 100%;
-    color: var(--bodyTextColor);
-  }
-  *,
-  *:before,
-  *:after {
-    margin: 0;
+  .cs-button-transparent {
+    position: relative;
+    align-items: center;
+    justify-content: center;
     box-sizing: border-box;
-    padding: 0;
-  }
-  body {
-    transition: background-color 0.3s;
-  }
-  .container {
-    position: relative;
-    margin: auto;
-    width: 92%;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 0;
-    color: var(--headerColor);
-  }
-  p,
-  li,
-  a {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.5em;
-  }
-  p,
-  li {
-    color: #353535;
-  }
-  a:hover,
-  button:hover {
-    cursor: pointer;
-  }
-  .skip {
-    z-index: -1111111;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-  }
-  /* roboto-regular - latin */
-  @font-face {
-    font-style: normal;
-    font-family: "Roboto";
-    font-weight: 400;
-    font-display: swap;
-    src: local(""), url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"), url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* roboto-700 - latin */
-  @font-face {
-    font-style: normal;
-    font-family: "Roboto";
-    font-weight: 700;
-    font-display: swap;
-    src: local(""), url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"), url("/assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* roboto-900 - latin */
-  @font-face {
-    font-style: normal;
-    font-family: "Roboto";
-    font-weight: 900;
-    font-display: swap;
-    src: local(""), url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"), url("/assets/fonts/roboto-v29-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-}
-/* Reset Margins */
-@media only screen and (min-width: 1024px) {
-  body,
-  html {
-    margin: 0;
-    padding: 0;
-  }
-}
-/* Scale full website with the viewport width */
-@media only screen and (min-width: 3000px) {
-  body,
-  html {
-    font-size: 0.55vw;
-  }
-}
-/*-- -------------------------- -->
-<---      Dark Mode Toggle      -->
-<--- -------------------------- -*/
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-  body.dark-mode #dark-mode-toggle .cs-sun {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-  body.dark-mode #dark-mode-toggle .cs-moon {
-    opacity: 0;
-    transform: translate(-50%, -150%);
-    fill: #fff;
-  }
-  #dark-mode-toggle {
-    z-index: 1000;
-    position: absolute;
-    top: 0.625rem;
-    right: 4.375rem;
-    display: block;
-    border: none;
-    background: transparent;
-    height: 3rem;
-    width: 3rem;
+    display: inline-flex;
     overflow: hidden;
-    padding: 0;
+    padding-bottom: 18px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 18px;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: center;
+    text-decoration: none;
+    text-decoration-color: white;
+    vertical-align: middle;
+    white-space-collapse: collapse;
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: all 0.1s ease-in-out;
   }
-  #dark-mode-toggle img,
-  #dark-mode-toggle svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 1.25rem;
-    width: 1.25rem;
-    pointer-events: none;
+  .cs-button-transparent:hover {
+    text-decoration-color: white;
+    color: white;
+    background-color: #4a90e2;
+    border: 1px solid white;
+    transition: all 0.1s ease-in-out;
   }
-  #dark-mode-toggle .cs-moon {
-    z-index: 2;
-    transition: transform 0.3s, opacity 0.3s;
-  }
-  #dark-mode-toggle .cs-sun {
-    z-index: 1;
-    opacity: 0;
-    transform: translate(-50%, 100%);
-    transition: transform 0.3s, opacity 0.3s;
-  }
-}
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-  #dark-mode-toggle {
-    position: relative;
-    top: auto;
-    right: auto;
-    transform: none;
-    margin: 0;
-  }
-  #dark-mode-toggle:hover {
-    cursor: pointer;
-  }
-}
-/*-- -------------------------- -->
-<---     Mobile Navigation      -->
-<--- -------------------------- -*/
-/* Mobile - 1023px */
-@media only screen and (max-width: 63.9375rem) {
-  body.cs-open {
-    overflow: hidden;
+  .cs-hide-on-mobile {
+    display: none;
   }
   #cs-navigation {
     z-index: 10000;
     position: fixed;
+    display: flex;
+    height: 72px;
+    width: 94%;
+    top: 12px;
+    left: 50%;
+    border-radius: 8px;
     background-color: #fff;
-    width: 100%;
-    /* prevents padding from affecting height and width */
-    box-sizing: border-box;
-    padding: 0.75rem 1rem;
-    /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-    font-family: "Roboto", "Arial", sans-serif;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(149, 157, 165, 0.425) 0px 4px 8px;
+    transition: top 0.3s, border-radius 0.3s, width 0.3s, max-width 0.3s;
+    transform: translateX(-50%);
   }
   #cs-navigation .cs-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding: 8px;
   }
   #cs-navigation .cs-logo {
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 0 0;
-    height: 100%;
-    max-width: 9.125rem;
-    width: 40%;
-    /* prevents padding from affecting height and width */
-    box-sizing: border-box;
-    padding: 0;
+    z-index: 9999;
+    height: 36px;
   }
   #cs-navigation .cs-logo img {
     height: 100%;
     width: 100%;
-    /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
     object-fit: contain;
-    /* places the image to the left edge of the parent */
-    object-position: left;
-  }
-  #cs-navigation .cs-toggle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 0.25rem;
-    margin: 0 0 0 auto;
-    background-color: transparent;
-    height: clamp(2.75rem, 6vw, 3rem);
-    /* 44px - 48px */
-    width: clamp(2.75rem, 6vw, 3rem);
-  }
-  #cs-navigation .cs-active .cs-line1 {
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(225deg);
-  }
-  #cs-navigation .cs-active .cs-line2 {
-    top: 50%;
-    transform: translate(-50%, -50%) translateY(0) rotate(-225deg);
-    transform-origin: center;
-  }
-  #cs-navigation .cs-active .cs-line3 {
-    bottom: 100%;
-    opacity: 0;
-  }
-  #cs-navigation .cs-box {
-    position: relative;
-    /* 14px - 16px */
-    height: clamp(0.875rem, 1.5vw, 1rem);
-    /* 24px - 28px */
-    width: clamp(1.5rem, 2vw, 1.75rem);
-  }
-  #cs-navigation .cs-line {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 2px;
-    background-color: #1a1a1a;
-    height: 2px;
-    width: 100%;
-  }
-  #cs-navigation .cs-line1 {
-    top: 0;
-    transition: transform 0.5s, top 0.3s, left 0.3s;
-    animation-duration: 0.7s;
-    animation-timing-function: ease;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    transform-origin: center;
-  }
-  #cs-navigation .cs-line2 {
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    transition: top 0.3s, left 0.3s, transform 0.5s;
-    animation-duration: 0.7s;
-    animation-timing-function: ease;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-  }
-  #cs-navigation .cs-line3 {
-    bottom: 0;
-    transition: bottom 0.3s, opacity 0.3s;
+    transition: all 0.1s ease-in-out;
   }
   #cs-navigation .cs-ul-wrapper {
     z-index: -1;
@@ -493,8 +312,128 @@
     width: 100%;
   }
 }
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  .cs-hide-on-mobile {
+    display: block;
+  }
+  .cs-hide-on-desktop {
+    display: none;
+  }
+}
+/* Fonts and general styles */
+@media only screen and (min-width: 0rem) {
+  body,
+  html {
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 100%;
+    color: var(--bodyTextColor);
+  }
+  *,
+  *:before,
+  *:after {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  body {
+    transition: background-color 0.3s;
+  }
+  .container {
+    position: relative;
+    margin: auto;
+    width: 92%;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    color: var(--headerColor);
+  }
+  p,
+  li,
+  a {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5em;
+  }
+  p,
+  li {
+    color: #353535;
+  }
+  a:hover,
+  button:hover {
+    cursor: pointer;
+  }
+  .skip {
+    z-index: -1111111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  /* Plus Jakarta Sans - Regular */
+  @font-face {
+    font-style: normal;
+    font-family: "Plus Jakarta Sans";
+    font-weight: 400;
+    font-display: swap;
+    src: local(""), url("/assets/fonts/PlusJakartaSans-Regular.woff2") format("woff2"), url("/assets/fonts/PlusJakartaSans-Regular.woff") format("woff"), url("/assets/fonts/PlusJakartaSans-Regular.ttf") format("truetype");
+    /* Older browsers */
+  }
+  /* Plus Jakarta Sans - Bold */
+  @font-face {
+    font-style: normal;
+    font-family: "Plus Jakarta Sans";
+    font-weight: 700;
+    font-display: swap;
+    src: local(""), url("/assets/fonts/PlusJakartaSans-Bold.woff2") format("woff2"), url("/assets/fonts/PlusJakartaSans-Bold.woff") format("woff"), url("/assets/fonts/PlusJakartaSans-Bold.ttf") format("truetype");
+    /* Older browsers */
+  }
+  /* Plus Jakarta Sans - ExtraBold */
+  @font-face {
+    font-style: normal;
+    font-family: "Plus Jakarta Sans";
+    font-weight: 900;
+    font-display: swap;
+    src: local(""), url("/assets/fonts/PlusJakartaSans-ExtraBold.woff2") format("woff2"), url("/assets/fonts/PlusJakartaSans-ExtraBold.woff") format("woff"), url("/assets/fonts/PlusJakartaSans-ExtraBold.ttf") format("truetype");
+    /* Older browsers */
+  }
+}
+/* Reset Margins */
+@media only screen and (min-width: 64rem) {
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+  }
+}
+/* Scale full website with the viewport width */
+@media only screen and (min-width: 90rem) {
+  body,
+  html {
+    font-size: 0.55vw;
+  }
+}
+@media only screen and (max-width: 64rem) {
+  body.cs-open {
+    overflow: hidden;
+  }
+  #cs-navigation.scrolled {
+    top: 0;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 0;
+  }
+}
 /* Dark Mode */
-@media only screen and (max-width: 63.9375rem) {
+@media only screen and (max-width: 64rem) {
   body.dark-mode #cs-navigation {
     background-color: var(--dark);
   }
@@ -516,7 +455,7 @@
 <---     Navigation Dropdown    -->
 <--- -------------------------- -*/
 /* Mobile - 1023px */
-@media only screen and (max-width: 63.9375rem) {
+@media only screen and (max-width: 64rem) {
   #cs-navigation .cs-dropdown {
     position: relative;
     color: var(--bodyTextColorWhite);
@@ -704,75 +643,18 @@
     display: none;
   }
 }
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-mode #cs-navigation .cs-drop-ul {
-    background-color: var(--dark);
-  }
-  body.dark-mode #cs-navigation .cs-li-link.cs-drop-link:hover {
-    background-color: var(--medium);
-  }
-  body.dark-mode #cs-navigation .cs-drop-icon {
-    /* turns it white */
-    filter: grayscale(1) brightness(1000%);
-  }
-}
 /*-- -------------------------- -->
 <---     Desktop Navigation     -->
 <--- -------------------------- -*/
 /* Small Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 90rem) {
   #cs-navigation {
-    z-index: 10000;
-    position: fixed;
-    background-color: #fff;
-    width: 100%;
-    /* prevents padding from affecting height and width */
-    box-sizing: border-box;
-    padding: 0 1rem;
-    /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-    font-family: "Roboto", "Arial", sans-serif;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  }
-  #cs-navigation .cs-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: auto;
-    max-width: 80rem;
-    width: 100%;
-    gap: 1.5rem;
-  }
-  #cs-navigation .cs-toggle {
-    display: none;
-  }
-  #cs-navigation .cs-logo {
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* margin-right auto pushes everything away from it to the right */
-    margin: 0 auto 0 0;
-    height: 4.0625rem;
-    max-width: 21.875rem;
-    width: 18.4%;
-    padding: 0;
-  }
-  #cs-navigation .cs-logo img {
-    height: 100%;
-    width: 100%;
-    /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
-    object-fit: contain;
+    max-width: unset;
   }
   #cs-navigation .cs-ul {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0;
-    width: 100%;
-    padding: 0;
-    /* 20px - 36px */
-    gap: clamp(1.25rem, 2.6vw, 2.25rem);
+    justify-content: space-between;
+    gap: 30px 30px;
   }
   #cs-navigation .cs-li {
     padding: 2rem 0;
@@ -781,14 +663,10 @@
     flex: none;
   }
   #cs-navigation .cs-li-link {
-    position: relative;
-    display: block;
-    margin: 0;
-    text-decoration: none;
-    /* 14px - 16px */
-    font-size: clamp(0.875rem, 1vw, 1rem);
-    line-height: 1.5em;
-    color: var(--bodyTextColor);
+    font-size: 24px;
+    line-height: 32px;
+    color: black;
+    opacity: 0.9;
   }
   #cs-navigation .cs-li-link:hover:before {
     width: 100%;
@@ -801,7 +679,7 @@
     content: "";
     opacity: 1;
     display: block;
-    background: var(--primary);
+    background: black;
     height: 2px;
     width: 0%;
     transition: width 0.3s;
@@ -809,21 +687,31 @@
   #cs-navigation .cs-li-link.cs-active:before {
     width: 100%;
   }
-}
-/* Dark Mode */
-@media only screen and (min-width: 64rem) {
-  body.dark-mode #cs-navigation {
-    background-color: var(--dark);
+  #cs-navigation .cs-button-contact {
+    display: flex;
+    align-items: center;
+    background-color: #29a71a;
+    gap: 4px 4px;
+    border-radius: 32px;
+    text-decoration: none;
+    padding: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
-  body.dark-mode #cs-navigation .cs-logo {
-    /* makes it turn white */
-    filter: grayscale(1) brightness(1000%);
+  #cs-navigation .cs-button-contact-text {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
   }
-  body.dark-mode #cs-navigation .cs-li-link {
-    color: var(--bodyTextColorWhite);
+  #cs-navigation .cs-button-contact img {
+    width: 32px;
+    height: 32px;
   }
-  body.dark-mode #cs-navigation .cs-li-link:before {
-    background-color: var(--primaryLight);
+  #cs-navigation.scrolled {
+    top: 0;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 0;
   }
 }
 /*-- -------------------------- -->
@@ -892,6 +780,9 @@
 }
 /* Tablet */
 @media only screen and (min-width: 48rem) {
+  .cs-hide-on-mobile {
+    display: block;
+  }
   #int-hero {
     font-size: 100%;
   }
@@ -956,15 +847,47 @@
     color: #fff;
     text-align: center;
   }
+  #cta #cta-form {
+    position: relative;
+    max-width: 37.375rem;
+    margin: 0 auto 2.25rem;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 0.5rem;
+  }
+  #cta #cta-form label {
+    display: block;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+  #cta #cta-form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: 1px solid #fff;
+    border-radius: 0.25rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+  #cta #cta-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  #cta #cta-form input:focus {
+    outline: none;
+    border-color: var(--primary);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
   #cta:before {
     z-index: -1;
     position: absolute;
     top: 0;
     left: 0;
     content: "";
-    opacity: 0.7;
     display: block;
-    background: #000;
+    background: #1f3f76;
     height: 100%;
     width: 100%;
   }
@@ -972,18 +895,50 @@
 /* Small Desktop */
 @media only screen and (min-width: 64rem) {
   #cta {
-    padding: 10.5rem 0;
+    padding: var(--sectionPadding);
+  }
+  #cta .container {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    gap: 30px 30px;
+  }
+  #cta #cta-form {
+    max-width: 40rem;
+    padding: 2rem;
+  }
+  #cta .cs-text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: right;
+    color: white;
+    opacity: 0.9;
+  }
+  #cta .title {
+    font-size: 44px;
+    font-weight: 900;
+    color: #fff;
+    text-align: right;
   }
 }
 /* Large Desktop */
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 90rem) {
   #cta {
-    position: relative;
-    margin-top: 6.25rem;
+    display: flex;
+    justify-content: center;
+  }
+  #cta #cta-form {
+    max-width: unset;
+    padding: 2rem;
+    margin: unset;
   }
   #cta .container {
-    margin: auto;
-    width: 90.0625%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: unset;
+    max-width: 120rem;
   }
   #cta picture {
     left: 50%;
@@ -1006,6 +961,7 @@
     display: none;
   }
   #cta:after {
+    background-color: #1f3f76;
     z-index: -3;
     position: absolute;
     bottom: 0;
@@ -1014,18 +970,8 @@
     opacity: 1;
     transform: translateX(-50%);
     display: block;
-    background: url("/assets/svgs/cta-squares.svg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 69.25rem;
-    width: 125rem;
-  }
-}
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-mode #cta:after {
-    display: none;
+    height: 64rem;
+    width: 100%;
   }
 }
 /*-- -------------------------- -->
@@ -1034,8 +980,8 @@
 /* Mobile */
 @media only screen and (min-width: 0rem) {
   #footer {
-    background: #1c1c1c;
-    padding: 5.25rem 0 1.25rem;
+    background: black;
+    padding: var(--sectionPadding);
     font-size: min(4vw, 1.2em);
   }
   #footer .left-section {
@@ -1053,8 +999,7 @@
   }
   #footer .left-section .logo img {
     display: block;
-    height: 100%;
-    width: auto;
+    height: 3rem;
   }
   #footer .left-section p {
     opacity: 0.9;
@@ -1066,16 +1011,15 @@
     text-align: center;
   }
   #footer .right-section {
-    margin: auto;
-    max-width: 25.4375rem;
     width: 96%;
+    display: flex;
   }
   #footer .right-section .lists {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: row;
+    gap: 24px;
     margin: auto;
-    max-width: 19.1875rem;
+    max-width: 22.5rem;
     width: 96%;
   }
   #footer .right-section .lists ul {
@@ -1143,7 +1087,7 @@
   }
   #footer .credit {
     margin: auto;
-    margin-top: 6.25rem;
+    margin-top: 2rem;
     width: 96%;
     font-size: 1rem;
     line-height: 2.25rem;
@@ -1167,6 +1111,7 @@
 @media only screen and (min-width: 64rem) {
   #footer {
     font-size: min(1.2vw, 1em);
+    padding: clamp(1.25rem, 3.82vw, 2.75rem) 2.1rem clamp(1.25rem, 3.82vw, 2.75rem);
   }
   #footer .container {
     display: flex;
@@ -1177,6 +1122,7 @@
     max-width: 82.5rem;
     width: 96%;
     padding: 0;
+    gap: 24px;
   }
   #footer .left-section {
     margin: 0;
@@ -1231,12 +1177,6 @@
   }
   #footer .credit .copyright {
     display: inline-block;
-  }
-}
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-mode #footer {
-    background: #061623;
   }
 }
 

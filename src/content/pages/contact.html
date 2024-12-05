@@ -1,10 +1,10 @@
 ---
-title: 'Contact | Code Stitch Web Designs'
-description: 'Meta description for the page'
-preloadImg: '/assets/images/cabinets2.jpg'
+title: 'Contato | Echo Digital'
+description: 'Fale conosco da forma que preferir: entre em contato diretamente ou nos envie seus dados para retornarmos.'
+preloadImg: '/assets/images/contact-bg.jpg'
 permalink: 'contact/'
 eleventyNavigation:
-    key: Contact Us
+    key: Contato
     order: 600
     hideOnDesktop: true
 ---
@@ -18,82 +18,46 @@ eleventyNavigation:
 {% block body %}
 
     <!-- ============================================ -->
-    <!--                    LANDING                   -->
+    <!--                Opções de Contato             -->
     <!-- ============================================ -->
 
-    <section id="int-hero">
-        <h1 id="home-h">Contact Us</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
-        </picture>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                Contact Form                  -->
-    <!-- ============================================ -->
-
-    <section id="cs-contact">
+    <section id="cs-contact-options">
         <div class="cs-container">
-            <form id="cs-form" name="Contact Form" method="post">
-                <div class="cs-content">
-                    <span class="cs-topper">Contact</span>
-                    <h2 class="cs-title">Get in Touch</h2>
-                    <p class="cs-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus elementum ullamcorper ipsum porttitor aliquam. Id magna urna ultrices odio pulvinar. Sed ut.
-                    </p>
+            <!-- Quero Chamar -->
+            <div class="cs-option">
+                <h2 class="cs-title">Quero Chamar</h2>
+                <p class="cs-text">Prefere entrar em contato diretamente? Escolha um dos canais abaixo:</p>
+                <div class="cs-links">
+                    <a href="mailto:contato@echodigital.com" class="cs-button-solid">Enviar E-mail</a>
+                    <a href="https://wa.me/seunumero" target="_blank" class="cs-button-solid">Chamar no WhatsApp</a>
                 </div>
-                <label>
-                    Name
-                    <input required type="text" id="name" name="name" placeholder="Name">
-                </label>
-                <label>
-                    Email
-                    <input required type="text" id="email" name="email" placeholder="Email">
-                </label>
-                <label>
-                    Phone
-                    <input required type="text" id="phone" name="phone" placeholder="Phone">
-                </label>
-                <label>
-                    How Did You Find Us
-                    <input type="text" id="find" name="find-us" placeholder="How did you find us?">
-                </label>
-                <label class="cs-label-message">
-                    Message
-                    <textarea required name="Message" id="message" placeholder="Write message..."></textarea>
-                </label>
-                <button class="cs-button-solid" type="submit">Submit Message</button>
-            </form>
-            <div class="cs-right-section">
-                <!--Email-->
-                <span class="cs-header">Email</span>
-                <a class="cs-link" href="mailto:{{client.email}}">{{client.email}}</a>
-                <!--Phone-->
-                <span class="cs-header">Phone</span>
-                <a class="cs-link" href="tel:{{client.phoneForTel}}">{{client.phoneFormatted}}</a>
-                <!--Address-->
-                <span class="cs-header">Address</span>
-                <a class="cs-link" href="{{client.address.mapLink}}">
-                    {{client.address.lineOne}},
-                    <br/>
-                    {{client.address.lineTwo}},
-                    <br/>
-                    <span class="cs-block">
-                        {{client.address.city}}
-                        {{client.address.state}}
-                        {{client.address.zip}}
-                    </span>
-                </a>
+            </div>
 
-                <!-- Background Image-->
-                <picture class="cs-bg-picture">
-                    <source media="(min-width: 601px)" srcset="/assets/images/skyscraper.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/skyscraper.jpg" alt="building" loading="lazy" width="2500" height="1667">
-                </picture>
-
+            <!-- Quero Que Me Chamem -->
+            <div class="cs-option">
+                <h2 class="cs-title">Quero Que Me Chamem</h2>
+                <p class="cs-text">Entraremos em contato no horário mais conveniente para você.</p>
+                <form id="cs-form-callback" name="Callback Form" method="post">
+                    <label class="cs-label">
+                        Nome
+                        <input class="cs-input" required type="text" id="name-callback" name="name" placeholder="Seu Nome">
+                    </label>
+                    <label class="cs-label">
+                        E-mail
+                        <input class="cs-input" required type="email" id="email-callback" name="email" placeholder="seu@email.com">
+                    </label>
+                    <label class="cs-label">
+                        Telefone
+                        <input class="cs-input" required type="text" id="phone-callback" name="phone" placeholder="(DDD) 98765-4321">
+                    </label>
+                    <label class="cs-label">
+                        Melhor horário para ligar
+                        <input class="cs-input" required type="text" id="time-callback" name="best-time" placeholder="Ex.: Manhã, Tarde ou Noite">
+                    </label>
+                    <button class="cs-button-solid" type="submit">Enviar</button>
+                </form>
             </div>
         </div>
     </section>
+
 {% endblock %}

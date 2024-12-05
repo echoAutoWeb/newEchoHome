@@ -51,6 +51,7 @@
 
         &:hover {
             color: var(--headerColor);
+
             &:before {
                 opacity: 1;
             }
@@ -378,6 +379,7 @@
 
             &:hover {
                 color: var(--headerColor);
+
                 &:before {
                     opacity: 1;
                 }
@@ -399,6 +401,7 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         .recent-articles {
+
             .blog-h1,
             .blog-desc,
             .blog-author,
@@ -408,11 +411,13 @@
         }
 
         .blog-sidebar {
+
             .feature-h3,
             .feature-date,
             .blog-header {
                 color: #f7f7f7;
             }
+
             .blog-header {
                 &:after {
                     background: var(--primary);
@@ -421,6 +426,7 @@
         }
 
         .blog-article {
+
             .blog-h1,
             .blog-author,
             .blog-date {
@@ -428,6 +434,7 @@
             }
 
             #blog-content {
+
                 h1,
                 h2,
                 h3,
@@ -436,11 +443,13 @@
                 h6 {
                     color: #f7f7f7;
                 }
+
                 p,
                 li {
                     opacity: 0.8;
                     color: #f7f7f7;
                 }
+
                 a {
                     color: #9dafe5;
                 }
@@ -573,6 +582,7 @@
         display: block;
         max-width: calc(795 / 16 * 1em);
         width: 100%;
+
         .blog-mainImage {
             position: relative;
             display: block;
@@ -776,6 +786,7 @@
         .cs-nav-li {
             list-style: none;
             line-height: 1.5em;
+
             &:last-of-type {
                 margin-bottom: 0;
             }
@@ -865,20 +876,6 @@
             display: block;
             height: calc(13 / 16 * 1rem);
             width: auto;
-        }
-    }
-}
-
-/* Inbetween - 600px */
-@media only screen and (min-width: 37.5em) {
-    #cs-footer {
-        .cs-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: flex-start;
-            /* 48px - 60px */
-            column-gap: clamp(3em, 5.9vw, 3.75em);
         }
     }
 }

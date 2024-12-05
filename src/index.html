@@ -1,5 +1,5 @@
 ---
-title: 'Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO'
+title: 'Echo)))Digital Agência Web'
 description: 'Meta description for the page'
 preloadImg: '/assets/images/landing.jpg'
 permalink: '/'
@@ -15,26 +15,26 @@ eleventyNavigation:
     <link rel="stylesheet" href="/assets/css/local.css"/>
     <link rel="stylesheet" href="/assets/css/critical.css"/>
 
-    <!-- Script for Netlify Identity -->
-    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script defer>
-        if (window.netlifyIdentity) {
-            window
-                .netlifyIdentity
-                .on('init', (user) => {
-                    if (!user) {
-                        window
-                            .netlifyIdentity
-                            .on('login', () => {
-                                document.location.href = '/admin/';
-                            });
-                    }
-                });
-        }
-    </script>
+<!-- Script for Netlify Identity -->
+<script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script defer>
+    if (window.netlifyIdentity) {
+        window
+            .netlifyIdentity
+            .on('init', (user) => {
+                if (!user) {
+                    window
+                        .netlifyIdentity
+                        .on('login', () => {
+                            document.location.href = '/admin/';
+                        });
+                }
+            });
+    }
+</script>
 
-    <!-- JSON Schema Markup -->
-    <script type="application/ld+json">
+<!-- JSON Schema Markup -->
+<script type="application/ld+json">
         {
             "@context": "http://schema.org",
             "@type": "LocalBusiness",
@@ -74,315 +74,322 @@ eleventyNavigation:
 
 {% block body %}
 
-    <!-- ============================================ -->
-    <!--                    Hero                      -->
-    <!-- ============================================ -->
-
-    <section id="hero">
-        <div class="cs-container">
-            <div class="cs-flex-group">
-                <span class="cs-topper">mountain hiking society</span>
-                <h1 class="cs-title">Explore the World with Exciting People</h1>
-                <p class="cs-text">
-                    Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Nibh tortor id aliquet lectus proin nibh condimentum.
-                </p>
-                <a href="/about" class="cs-button-solid">Explore More</a>
-                <a href="/contact" class="cs-button-transparent">
-                    <img
-                    class="cs-img"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
-                    alt="play icon"
-                    width="17"
-                    height="17"/>
-                    Get in Touch
-                </a>
-            </div>
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+<section id="hero-855">
+    <div class="cs-container">
+        <div class="cs-hero-container">
+            <h1 class="cs-title">Conquiste mais clientes com menos dor de cabeça</h1>
+            <h2 class="cs-text"> Serviço completo para sua marca, empresa ou negócio bombar nas buscas.<br>Aumente seu
+                lucro com a Echo Digital.</h2>
         </div>
+        <div class="cs-button-box">
+            <div>
+                <p class="cs-text-checkup">Ganhe um check-up completo do seu site.</p>
+                <a class="cs-button-transparent" href="/about">Quero meu relatório grátis</a>
+            </div>
+            <a class="cs-button-solid" href="/about">Conheça nossos planos</a>
+        </div>
+    </div>
+    <picture class="cs-picture">
+        <source media="(min-width: 1024px)" srcset="/assets/images/reaching-more-clients.jpg" type="image/jpg"><img
+            alt="a laptop showing Mako Pool Restorations" decoding="async" height="493"
+            src="/assets/images/reaching-more-clients.jpg" width="936" loading="eager">
+    </picture>
+    </div>
+</section>
 
-        <!-- Background Image -->
-        <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="/assets/images/landing-m.webp">
-            <source media="(min-width: 601px)" srcset="/assets/images/landing.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/landing.jpg" alt="new home" width="2500" height="1667" loading="eager">
+<!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
+<section id="services-1188">
+    <!-- Google Meu Negócio -->
+    <div class="cs-container-google-meu-negocio">
+        <picture class="cs-picture-google-business">
+            <img aria-hidden="true" decoding="async" src="/assets/images/google-meu-negocio.png" alt="google meu negócio logo"/>
         </picture>
-    </section>
+        <h2 class="cs-text">Cuidamos do seu Google Meu Negócio: configuramos, colocamos sua empresa, negócio ou serviço na frente e monitoramos tudo.<br>Você só colhe os resultados.</h2>
+        <a class="cs-button-transparent" href="/about">Análise Gratuita</a>
+    </div>
+    <!-- Outros Serviços -->
+    <div class="cs-container">
+        <div class="cs-content">
+            <h1 class="cs-title white">Foque no seu negócio,<br> nós cuidamos do resto.</h1>
+            <h2 class="cs-text white">Sites incríveis, presença garantida no Google Meu Negócio e suporte sempre ao seu lado.<br> Você foca no que importa, a gente resolve o resto.</h2>
+            <br>
+        </div>
+        
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img aria-hidden="true" decoding="async" src="/assets/svgs/search.svg" alt="Destaque nas buscas" />
+                </picture>
+                <div class="cs-text-group">
+                    <h2 class="cs-title">Domine as buscas</h2>
+                    <p class="cs-text">Colocamos sua empresa pra frente no Google.<br>Sua marca sendo vista antes da concorrência.</p>
+                </div>
+                <a href="https://wa.me/seunumero" target="_blank" class="cs-topper">Saiba mais</a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img aria-hidden="true" decoding="async" src="/assets/svgs/SEO.svg" alt="SEO Imbatível" width="48" height="48" />
+                </picture>
+                <div class="cs-text-group">
+                    <h2 class="cs-title">SEO que funciona</h2>
+                    <p class="cs-text">Suba no ranking e veja os resultados mês a mês.<br>Cada visita uma chance a mais pra fechar vendas.</p>
+                </div>
+                <a href="https://wa.me/seunumero" target="_blank" class="cs-topper">Saiba mais</a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img aria-hidden="true" decoding="async" src="/assets/svgs/shop.svg" alt="Eleve sua marca" width="48" height="48" />
+                </picture>
+                <div class="cs-text-group">
+                    <h2 class="cs-title">Eleve sua marca</h2>
+                    <p class="cs-text">Design profissional para se destacar.<br>Seu negócio com a cara e a qualidade que os clientes querem.</p>
+                </div>
+                <a href="https://wa.me/seunumero" target="_blank" class="cs-topper">Saiba mais</a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img aria-hidden="true" decoding="async" src="/assets/svgs/rocket.svg" alt="Carregamento rápido" width="48" height="48" />
+                </picture>
+                <div class="cs-text-group">
+                    <h2 class="cs-title">Super velocidade</h2>
+                    <p class="cs-text">Sites que abrem em 1.6 segundo ou menos.<br> Mais visitantes, menos desistências.</p>
+                </div>
+                <a href="https://wa.me/seunumero" target="_blank" class="cs-topper">Saiba mais</a>
+            </li>
+        </ul>
+        
+    </div>
+</section>
 
-    <!-- ============================================ -->
-    <!--                  Services                    -->
-    <!-- ============================================ -->
-
-    <section id="services" class="services">
-        <!-- Get Icons From flaticon.com -->
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service1.svg"
-                alt="appliance"
-                width="48"
-                height="48"/>
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+<section id="sbs-1362">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-background">
+                <source media="(max-width: 600px)" srcset="/assets/images/resultados-impressionantes.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/resultados-impressionantes.jpg">
+                <img aria-hidden="true" decoding="async" src="/assets/images/resultados-impressionantes.jpg"
+                    alt="cabinets" loading="lazy" width="400" height="563">
             </picture>
-            <h2>Service 1</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
         </div>
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service2.svg"
-                alt="appliance"
-                width="48"
-                height="48"/>
-            </picture>
-            <h2>Service 2</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service3.svg"
-                alt="appliance"
-                width="48"
-                height="48"/>
-            </picture>
-            <h2>Service 3</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-    </section>
 
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
-
-    <section id="sbs">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="563">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="563">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Company Title</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <div class="cs-flex-group">
-                    <p class="cs-flex-p">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </p>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img 
-                    class="cs-quote-icon"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
-                    alt="gavel"
-                    width="136"
-                    height="77"/>
-                </div>
-                <a href="/about" class="cs-button-solid">More About Us</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--            Extra Content To Rank             -->
-    <!-- ============================================ -->
-
-    <section id="sbs-r">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="560">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="560">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">SEO Ranking</span>
-                <h2 class="cs-title">Talk about a main service keyword</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non tenetur, iure nihil ipsam qui atque commodi id voluptatem nesciunt, quis animi fuga cum doloribus! Eaque laboriosam, unde consectetur iure asperiores ullam. Consequuntur debitis a voluptatibus vitae optio autem explicabo quia neque est quas, in placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus modi laudantium voluptatibus rem libero error minus quia eligendi sapiente eos.
-                </p>
-                <a href="/blog" class="cs-button-solid">Read our Blog</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Gallery                    -->
-    <!-- ============================================ -->
-
-    <section id="gallery">
-        <div class="cs-container">
-            <span class="cs-topper">Our Portfolio</span>
-            <h2 class="cs-title">Et orci volutpat, back up generator installations</h2>
-            <div class="cs-image-group">
-                <!-- Row 1-->
-                <div class="cs-row cs-row-1">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port1-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port1.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port1.jpg" alt="new hallway" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port4-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port4.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port4.jpg" alt="new home construction" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port7-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port7.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port7.jpg" alt="building a new wall" loading="lazy" width="400" height="560">
-                    </picture>
-                </div>
-                <!-- Row 2 -->
-                <div class="cs-row cs-row-2">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port2-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port2.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port2.jpg" alt="new kitchen" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port5-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port5.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port5.jpg" alt="apartment addition" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port8-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port8.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port8.jpg" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
-                    </picture>
-                </div>
-                <!-- Row 3 -->
-                <div class="cs-row cs-row-3">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port3-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port3.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port3.jpg" alt="new kitchen" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port6-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port6.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port6.jpg" alt="apartment addition" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port9-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port9.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port9.jpg" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
-                    </picture>
-
-                </div>
-            </div>
-            <a href="/projects" class="cs-button-solid">View Full Gallery</a>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Reviews                    -->
-    <!-- ============================================ -->
-
-    <section id="reviews">
-        <div class="cs-container">
-            <span class="cs-topper">Our Reviews</span>
-            <h2 class="cs-title">Words From Our Customers</h2>
+        <div class="cs-content">
+            <h2 class="cs-title">Sites com <span class="cs-title blue">entrada zero</span> a partir de R$497/mês</h2>
             <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
+                Oferecemos um site de 5 páginas para pequenas empresas, sem custo inicial. Se precisar de mais páginas,
+                fazemos um orçamento. O contrato é de 12 meses, com design, desenvolvimento, hospedagem, edições
+                ilimitadas, suporte 24/7 e atualizações.
             </p>
-            <ul class="cs-card-group">
-                <!-- Review 1 -->
+
+            <ul class="cs-card-group" id="list-1597">
                 <li class="cs-item">
-                    <img
-                    class="cs-item-img"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile5.png"
-                    alt="profile picture"
-                    width="80"
-                    height="80"/>
-                    <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <span class="cs-reviewer">
-                        Jon Doe
-                        <span class="cs-desc">Homeowner</span>
-                    </span>
-                    <img
-                    class="cs-item-stars"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                    alt="stars"
-                    width="96"
-                    height="16"/>
+                    <h3 class="cs-h3">Google Meu Negócio</h3>
+                    <p class="cs-item-text">Registramos seu negócio para aparecer no Google sem gastar com anúncios.</p>
                 </li>
-                <!-- Review 2 -->
                 <li class="cs-item">
-                    <img
-                    class="cs-item-img"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile-4.png"
-                    alt="profile picture"
-                    width="80"
-                    height="80"/>
-                    <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <span class="cs-reviewer">
-                        Jane Doe
-                        <span class="cs-desc">Homeowner</span>
-                    </span>
-                    <img
-                    class="cs-item-stars"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                    alt="stars"
-                    width="96"
-                    height="16"/>
+                    
+                                        <h3 class="cs-h3">Design Customizado</h3>
+                                        <p class="cs-item-text">Seu site, do jeito que você precisa, feito pela nossa equipe.</p>
+                                    </li>
+                                    <li class="cs-item">
+
+                    <h3 class="cs-h3">Segurança Total</h3>
+                    <p class="cs-item-text">Sites à prova de hackers, sem risco de invasão ou alterações.</p>
+                </li>
+                <li class="cs-item">
+
+                    <h3 class="cs-h3">Speed Score 98-100</h3>
+                    <p class="cs-item-text">Sites rápidos e leves, com pontuação máxima no Google.</p>
+                </li>
+                <li class="cs-item">
+
+                    <h3 class="cs-h3">Suporte Humanizado</h3>
+                    <p class="cs-item-text">Fale com quem fez seu site diretamente pelo WhatsApp, sem call center nem
+                        robôs.</p>
+                </li>
+                <li class="cs-item">
+
+                    <h3 class="cs-h3">SEO Levado a Sério</h3>
+                    <p class="cs-item-text">Sem truques, explicamos tudo sobre SEO e garantimos que seu site apareça nas
+                        buscas.</p>
                 </li>
             </ul>
-            <a aria-label="read more reviews" href="/reviews" class="cs-button-solid">Our Reviews</a>
-        </div>
-    </section>
 
-    {% include 'components/cta.html' %}
+            <a href="/about" class="cs-button-transparent">Agende uma chamada</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--            Extra Content To Rank             -->
+<!-- ============================================ -->
+<section id="sbs-1640">
+    <div class="cs-container">
+        <div class="cs-stats-group">
+            <ul class="cs-stats">
+                <li class="cs-stat"><span class="cs-number">100%</span> <span class="cs-desc">Satisfação
+                        Garantida</span>
+                </li>
+                <li class="cs-stat"><span class="cs-number">100</span> <span class="cs-desc">Score de Velocidade</span>
+                </li>
+                <li class="cs-stat"><span class="cs-number">5/5</span> <span class="cs-desc">Reviews do Google</span>
+                </li>
+            </ul>
+            <picture class="cs-picture">
+                <img alt="a screenshot showing perfect Google pagespeed scores" decoding="async" height="461"
+                    src="/assets/images/pagespeed.png" aria-hidden="true" loading="lazy">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <h2 class="cs-title">Sites <span class="cs-color">melhores </span>que geram resultados <span class="cs-color">reais</span></h2>
+            <p class="cs-text white">Poucos conseguem alcançar as pontuações do Google PageSpeed que conseguimos em cada site que criamos.</p>
+            <p class="cs-text white quote">"Mas por que eu preciso de um site tão rápido assim?"</p>
+            <ul class="cs-ul" id="list-823">
+                <li class="cs-li"><img alt="icon" decoding="async" height="40" src="/assets/svgs/hourglass.svg" width="40" aria-hidden="true" class="cs-icon" loading="lazy">Tempos de carregamento mais rápidos aumentam o tráfego e as conversões. Ninguém gosta de esperar, e seus clientes também não!</li>
+                <li class="cs-li"><img alt="icon" decoding="async" height="40" src="/assets/svgs/reward.svg" width="40" aria-hidden="true" class="cs-icon" loading="lazy">Sites rápidos ajudam a melhorar seu SEO e aumentam a performance dos seus anúncios no Google. Pare de rasgar dinheiro!</li> 
+                <li class="cs-li"><img alt="icon" decoding="async" height="40" src="/assets/svgs/speed-test.svg" width="40" aria-hidden="true" class="cs-icon" loading="lazy">Nossos sites carregam em menos de 00:00:02. Nada de plugins caros ou truques. Só um código otimizado para performance.</li>
+            </ul>
+            <p class="cs-text white quote">"E como saber se o meu site está performando?"</p>
+            <p class="cs-text white">Envie o seu site pra gente e receba uma análise completa, sem custo, direto no seu e-mail ou WhatsApp.</p>
+            <a class="cs-button-solid" href="/contact">Receber relatório completo grátis</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Pricing                    -->
+<!-- ============================================ -->
+<section id="pricing-1690">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <h2 class="cs-title">Um pacote para cada orçamento</h2>
+                <p class="cs-text right">Temos diversas opções de plano para as mais diversas necessidades e orçamentos.
+                </p>
+            </div>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <span class="cs-package">Google Meu Negócio</span>
+                <p class="cs-text">Para quem quer atrair mais clientes sem gastar com propaganda.</p>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        Criação e otimização de perfil para o Google Meu Negócio
+                        <span class="checkmark">✔️</span>
+                    </li>
+                    <li class="cs-li">
+                        Gerenciamento de avaliações e respostas
+                        <span class="checkmark">✔️</span>
+                    </li>
+                    <li class="cs-li">
+                        Monitoramento de ranking local
+                        <span class="checkmark">✔️</span>
+                    </li>
+                    <li class="cs-li">
+                        SEO Local para sua região
+                        <span class="checkmark">✔️</span>
+                    </li>
+                    <li class="cs-li">
+                        Criação de posts otimizados para o seu negócio
+                        <span class="checkmark">✔️</span>
+                    </li>
+                    <li class="cs-li">
+                        Estratégias personalizadas para aumento de tráfego orgânico
+                        <span class="checkmark">✔️</span>
+                    </li>
+                </ul>
+                <span class="cs-price"><span class="cs-duration">à partir de</span>
+                    <span><span class="cs-currency">R$</span>497</span>
+                </span>
+                <a class="cs-button-solid" href="/contact/">Agende uma chamada</a>
+            </li>
+            <li class="cs-item cs-popular">
+                <span class="cs-package">Parceria Digital (+Site)</span>
+                <p class="cs-text">Para quem busca crescer de verdade e quer um site sempre atualizado, funcionando sem
+                    preocupações e com suporte total.</p>
+    
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        Design e Desenvolvimento
+                        <span class="checkmark">✔️</span>
+                    </li>
+                    <li class="cs-li">
+                        Hospedagem grátis
+                        <span class="checkmark">✔️</span>
+                    </li>
+                    <li class="cs-li">
+                        Domínio grátis
+                        <span class="checkmark">✔️</span>
+                    </li>
+                    <li class="cs-li">
+                        Edições ilimitadas
+                        <span class="checkmark">✔️</span>
+                    </li>
+                    <li class="cs-li">
+                        Suporte 24/7
+                        <span class="checkmark">✔️</span>
+                    </li>
+                    <li class="cs-li">
+                        Atualizações e Certificados
+                        <span class="checkmark">✔️</span>
+                    </li>
+                </ul>
+                <span class="cs-price">
+                    <span><span class="cs-currency">R$</span>497</span>
+                    <span class="cs-duration">/mês</span>
+                </span>
+                <a class="cs-button-solid" href="/contact/">Agende uma chamada</a>
+            </li>
+            <li class="cs-item">
+                <span class="cs-package">Solução Completa</span>
+                <p class="cs-text">Se você prefere um pagamento único e sem mensalidade, temos a opção à vista para
+                    você.</p>
+    
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        Design e Desenvolvimento
+                        <span class="checkmark">✔️</span>
+                    </li>
+                    <li class="cs-li">
+                        Hospedagem a R$49/mês
+                        <span class="checkmark">✔️</span>
+                    </li>
+                    <li class="cs-li">
+                        Páginas extras a R$200
+                        <span class="checkmark">✔️</span>
+                    </li>
+                    <li class="cs-li">
+                        Edições ilimitadas a +R$150/mês
+                        <span class="checkmark">✔️</span>
+                    </li>
+                    <li class="cs-li">
+                        Domínio grátis
+                        <span class="checkmark">✔️</span>
+                    </li>
+                    <li class="cs-li">
+                        Suporte 24/7
+                        <span class="checkmark">✔️</span>
+                    </li>
+                    <li class="cs-li">
+                        Atualizações e Certificados
+                        <span class="checkmark">✔️</span>
+                    </li>
+                </ul>
+                <span class="cs-price">
+                    <span><span class="cs-currency">R$</span>4999</span>
+                </span>
+                <a class="cs-button-solid" href="/contact/">Agende uma Chamada</a>
+            </li>
+        </ul>
+    </div>
+</section>
+{% include 'components/cta.html' %}
+
 {% endblock %}
