@@ -25,6 +25,19 @@
     --sectionPadding: 30px 10px 30px 10px;
   }
 
+  #hero-855 .cs-picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 48px 24px 48px 24px;
+  }
+
+  #cs-navigation.scrolled {
+    top: 0;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 0;
+  }
+
   // Text styles
   .cs-topper {
     display: block;
@@ -524,13 +537,6 @@
       overflow: hidden;
     }
   }
-
-  #cs-navigation.scrolled {
-    top: 0;
-    max-width: 100%;
-    width: 100%;
-    border-radius: 0;
-  }
 }
 
 /* Dark Mode */
@@ -879,13 +885,6 @@
       width: 32px;
       height: 32px;
     }
-  }
-
-  #cs-navigation.scrolled {
-    top: 0;
-    max-width: 100%;
-    width: 100%;
-    border-radius: 0;
   }
 }
 
