@@ -123,6 +123,9 @@
     border-radius: 8px;
     transition: all 0.1s ease-in-out;
   }
+  .cs-button-solid.wide {
+    width: 100%;
+  }
   .cs-button-solid:hover {
     text-decoration-color: black;
     color: black;
@@ -967,7 +970,7 @@
     display: none;
   }
   #cta:after {
-    background-color: #1f3f76;
+    background: linear-gradient(135deg, #0575e6, #021b79);
     z-index: -3;
     position: absolute;
     bottom: 0;
