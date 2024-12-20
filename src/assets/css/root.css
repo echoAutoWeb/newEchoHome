@@ -156,6 +156,9 @@
     border-radius: 8px;
     transition: all 0.1s ease-in-out;
   }
+  .cs-button-transparent.wide {
+    width: 100%;
+  }
   .cs-button-transparent:hover {
     text-decoration-color: white;
     color: white;
@@ -903,20 +906,24 @@
     gap: 30px 30px;
   }
   #cta #cta-form {
-    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 44rem;
     padding: 2rem;
+    height: 100%;
   }
   #cta .cs-text {
     font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
     text-align: right;
     color: white;
     opacity: 0.9;
+    margin: unset;
+    width: unset;
   }
   #cta .title {
-    font-size: 44px;
-    font-weight: 900;
+    font-size: 32px;
+    font-weight: 700;
     color: #fff;
     text-align: right;
   }
@@ -1009,85 +1016,8 @@
     color: #fff;
     text-align: center;
   }
-  #footer .right-section {
-    width: 96%;
-    display: flex;
-  }
-  #footer .right-section .lists {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-    margin: auto;
-    max-width: 22.5rem;
-    width: 96%;
-  }
-  #footer .right-section .lists ul {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0;
-  }
-  #footer .right-section .lists ul li {
-    opacity: 0.9;
-    margin-bottom: 0.75rem;
-    list-style: none;
-    font-size: 1.125rem;
-    color: #fff;
-  }
-  #footer .right-section .lists ul li a {
-    text-decoration: none;
-    line-height: 1.1666666667em;
-    color: #fff;
-    transition: color 0.3s;
-  }
-  #footer .right-section .lists ul li a:hover {
-    color: var(--primary);
-  }
-  #footer .right-section .lists ul h2 {
-    position: relative;
-    margin-bottom: 2.3125rem;
-    text-transform: uppercase;
-    font-size: 1.125rem;
-    line-height: 1.1666666667em;
-    font-weight: bold;
-    color: #fff;
-  }
-  #footer .right-section .lists ul h2:before {
-    position: absolute;
-    bottom: -1rem;
-    left: 0;
-    content: "";
-    opacity: 1;
-    display: block;
-    background: var(--primary);
-    height: 0.125rem;
-    width: 6.0625rem;
-  }
-  #footer .right-section .lists ul:nth-of-type(3) {
-    margin-top: 3.125rem;
-  }
-  #footer .right-section .lists ul:nth-of-type(3) li {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-  #footer .right-section .lists ul:nth-of-type(3) li:last-of-type {
-    margin-bottom: 0;
-  }
-  #footer .right-section .buttons {
-    display: flex;
-    justify-content: center;
-  }
-  #footer .right-section .cs-button-solid {
-    margin: 0;
-    height: 3.3125rem;
-    width: 15.625rem;
-    padding-top: 0.1875rem;
-  }
   #footer .credit {
-    margin: auto;
     margin-top: 2rem;
-    width: 96%;
     font-size: 1rem;
     line-height: 2.25rem;
     color: #fff;
@@ -1109,15 +1039,17 @@
 /* Small Desktop */
 @media only screen and (min-width: 64rem) {
   #footer {
+    display: flex;
+    align-items: flex-end;
     font-size: min(1.2vw, 1em);
-    padding: clamp(1.25rem, 3.82vw, 2.75rem) 2.1rem clamp(1.25rem, 3.82vw, 2.75rem);
+    padding: clamp(1.25rem, 3.82vw, 1.75rem) 2.1rem clamp(1.25rem, 3.82vw, 1.75rem);
+    justify-content: space-between;
   }
   #footer .container {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin: auto;
     max-width: 82.5rem;
     width: 96%;
     padding: 0;

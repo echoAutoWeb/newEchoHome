@@ -291,6 +291,11 @@
     width: 80px;
     height: 80px;
   }
+  #services-1188 .cs-content-gmn-and-stars {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   #services-1188 .cs-picture-google-business {
     display: flex;
     flex-direction: column;
@@ -299,6 +304,19 @@
   }
   #services-1188 .cs-picture-google-business img {
     width: 100%;
+  }
+  #services-1188 .cs-picture-stars img {
+    max-width: 264px;
+  }
+  #services-1188 .cs-other-services-bar {
+    position: relative;
+    width: 100vw;
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-weight: 700;
+    padding: 12px;
+    top: 32px;
   }
   #services-1188 .cs-icon {
     width: 1.875rem;

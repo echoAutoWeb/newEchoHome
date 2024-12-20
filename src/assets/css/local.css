@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* PAGE-SPECIFIC STYLES FOR THE HOME PAGE */
 /*-- -------------------------- -->
 <---       Side By Side         -->
@@ -169,37 +168,6 @@ html {
     margin: 0;
   }
 }
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-mode #sbs .cs-left:before, body.dark-mode #sbs .cs-left:after {
-    background: var(--accent);
-  }
-  body.dark-mode #sbs .cs-picture2 {
-    /* 6px - 12px */
-    border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
-    background-color: var(--dark);
-  }
-  body.dark-mode #sbs .cs-topper {
-    color: var(--primaryLight);
-  }
-  body.dark-mode #sbs .cs-title,
-  body.dark-mode #sbs .cs-text,
-  body.dark-mode #sbs .cs-h3,
-  body.dark-mode #sbs .cs-flex-p,
-  body.dark-mode #sbs .cs-name {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-mode #sbs .cs-flex-group {
-    background-color: var(--accent);
-  }
-  body.dark-mode #sbs .cs-job {
-    opacity: 0.8;
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-mode #sbs .cs-quote-icon {
-    opacity: 0.2;
-  }
-}
 /*-- -------------------------- -->
 <---       Side By Side         -->
 <--- -------------------------- -*/
@@ -209,7 +177,6 @@ html {
     position: relative;
     padding: var(--sectionPadding);
   }
-  /* Configuração para a imagem de fundo semelhante ao hero */
   #sbs-r .cs-picture {
     position: absolute;
     top: 0;
@@ -217,21 +184,16 @@ html {
     width: 100%;
     height: 100%;
     z-index: -1;
-    /* Coloca a imagem de fundo atrás do conteúdo */
   }
   #sbs-r .cs-picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Garante que a imagem cubra toda a área da seção */
     object-position: center;
-    /* Centraliza a imagem */
   }
-  /* Container principal para conteúdo */
   #sbs-r .cs-container {
     position: relative;
     z-index: 1;
-    /* Conteúdo acima da imagem de fundo */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -382,37 +344,6 @@ html {
     margin: 0;
   }
 }
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-mode #sbs-r .cs-left:before, body.dark-mode #sbs-r .cs-left:after {
-    background: var(--accent);
-  }
-  body.dark-mode #sbs-r .cs-picture2 {
-    /* 6px - 12px */
-    border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
-    background-color: var(--dark);
-  }
-  body.dark-mode #sbs-r .cs-topper {
-    color: var(--primaryLight);
-  }
-  body.dark-mode #sbs-r .cs-title,
-  body.dark-mode #sbs-r .cs-text,
-  body.dark-mode #sbs-r .cs-h3,
-  body.dark-mode #sbs-r .cs-flex-p,
-  body.dark-mode #sbs-r .cs-name {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-mode #sbs-r .cs-flex-group {
-    background-color: var(--accent);
-  }
-  body.dark-mode #sbs-r .cs-job {
-    opacity: 0.8;
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-mode #sbs-r .cs-quote-icon {
-    opacity: 0.2;
-  }
-}
 /*-- -------------------------- -->
 <---          Gallery           -->
 <--- -------------------------- -*/
@@ -505,12 +436,6 @@ html {
   #gallery .cs-row-3 .cs-picture3 {
     height: 39.3125em;
     width: 26.25em;
-  }
-}
-/* Dark mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-mode #gallery .cs-title {
-    color: var(--bodyTextColorWhite);
   }
 }
 /*-- -------------------------- -->
@@ -607,21 +532,6 @@ html {
   #reviews .cs-item {
     /* reset margin so it won't interfere with flexbox */
     margin: 0;
-  }
-}
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-mode #reviews .cs-title,
-  body.dark-mode #reviews .cs-text,
-  body.dark-mode #reviews .cs-item-p,
-  body.dark-mode #reviews .cs-reviewer {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-mode #reviews .cs-item {
-    background: var(--medium);
-  }
-  body.dark-mode #reviews .cs-desc {
-    color: var(--primaryLight);
   }
 }
 @media only screen and (min-width: 0rem) {
@@ -770,7 +680,7 @@ html {
   }
   #hero-855 .cs-button-box {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: center;
     align-items: flex-end;
   }
@@ -825,7 +735,7 @@ html {
   }
   #hero-855 .cs-button-box {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: flex-end;
     justify-content: center;
   }
@@ -1449,6 +1359,7 @@ html {
     font-weight: 600;
     text-align: left;
     text-size-adjust: 100%;
+    min-height: 64px;
   }
   #pricing-1690 .cs-ul {
     display: flex;
@@ -1467,7 +1378,7 @@ html {
     width: 100%;
     padding: 0;
     list-style: none;
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
     line-height: 1.2em;
     color: var(--bodyTextColor);
     gap: 1rem;
@@ -1582,70 +1493,6 @@ html {
     padding-right: 16px;
     padding-top: 16px;
     font-weight: 500;
-  }
-}
-@media only screen and (min-width: 0rem) {
-  body.dark-mode #pricing-1690 .cs-title,
-  body.dark-mode #pricing-1690 .cs-text,
-  body.dark-mode #pricing-1690 .cs-li,
-  body.dark-mode #pricing-1690 .cs-package,
-  body.dark-mode #pricing-1690 .cs-price,
-  body.dark-mode #pricing-1690 .cs-duration {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-mode #pricing-1690 .cs-text,
-  body.dark-mode #pricing-1690 .cs-duration {
-    opacity: 0.8;
-  }
-  body.dark-mode #pricing-1690 .cs-item {
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-  body.dark-mode #pricing-1690 .cs-item.cs-popular {
-    background-color: rgba(0, 0, 0, 0.7);
-    border: 1px solid #fff;
-    animation: ulGlow 7.2s forwards infinite;
-    box-shadow: rgba(67, 183, 255, 0.2) 0px 0px 44px, inset rgba(67, 183, 255, 0.2) 0px 0px 30px, inset rgba(67, 183, 255, 0.2) 0px 0px 55px, rgba(67, 183, 255, 0.4) 0px 0px 10px;
-  }
-  body.dark-mode #pricing-1690 .cs-icon {
-    filter: grayscale(1) brightness(1000%);
-  }
-  @keyframes ulGlow {
-    0% {
-      box-shadow: rgba(67, 183, 255, 0.2) 0px 0px 24px, inset rgba(67, 183, 255, 0.2) 0px 0px 69px, inset rgba(67, 183, 255, 0.2) 0px 0px 60px, rgba(67, 183, 255, 0.2) 0px 0px 74px;
-    }
-    50% {
-      box-shadow: rgba(67, 183, 255, 0.2) 0px 0px 24px, inset rgba(67, 183, 255, 0.2) 0px 0px 39px, inset rgba(67, 183, 255, 0.2) 0px 0px 24px, rgba(67, 183, 255, 0.2) 0px 0px 74px;
-    }
-    51% {
-      box-shadow: none;
-    }
-    52% {
-      box-shadow: rgba(67, 183, 255, 0.2) 0px 0px 24px, inset rgba(67, 183, 255, 0.2) 0px 0px 69px, inset rgba(67, 183, 255, 0.2) 0px 0px 24px, rgba(67, 183, 255, 0.2) 0px 0px 74px;
-    }
-    53% {
-      box-shadow: none;
-    }
-    64% {
-      box-shadow: rgba(67, 183, 255, 0.2) 0px 0px 24px, inset rgba(67, 183, 255, 0.2) 0px 0px 69px, inset rgba(67, 183, 255, 0.2) 0px 0px 24px, rgba(67, 183, 255, 0.2) 0px 0px 74px;
-    }
-    78% {
-      box-shadow: rgba(67, 183, 255, 0.2) 0px 0px 14px, inset rgba(67, 183, 255, 0.2) 0px 0px 49px, inset rgba(67, 183, 255, 0.2) 0px 0px 14px, rgba(67, 183, 255, 0.2) 0px 0px 54px;
-    }
-    92% {
-      box-shaodw: none;
-    }
-    93% {
-      box-shadow: rgba(67, 183, 255, 0.2) 0px 0px 14px, inset rgba(67, 183, 255, 0.2) 0px 0px 49px, inset rgba(67, 183, 255, 0.2) 0px 0px 14px, rgba(67, 183, 255, 0.2) 0px 0px 54px;
-    }
-    94% {
-      box-shaodw: none;
-    }
-    95% {
-      box-shadow: rgba(67, 183, 255, 0.2) 0px 0px 14px, inset rgba(67, 183, 255, 0.2) 0px 0px 49px, inset rgba(67, 183, 255, 0.2) 0px 0px 24px, rgba(67, 183, 255, 0.2) 0px 0px 54px;
-    }
-    100% {
-      box-shadow: rgba(67, 183, 255, 0.2) 0px 0px 24px, inset rgba(67, 183, 255, 0.2) 0px 0px 69px, inset rgba(67, 183, 255, 0.2) 0px 0px 60px, rgba(67, 183, 255, 0.2) 0px 0px 74px;
-    }
   }
 }
 

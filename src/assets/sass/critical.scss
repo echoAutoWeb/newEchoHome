@@ -337,6 +337,12 @@
       height: 80px;
     }
 
+    .cs-content-gmn-and-stars {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .cs-picture-google-business {
       display: flex;
       flex-direction: column;
@@ -346,6 +352,21 @@
 
     .cs-picture-google-business img {
       width: 100%;
+    }
+
+    .cs-picture-stars img {
+      max-width: 264px;
+    }
+
+    .cs-other-services-bar {
+      position: relative;
+      width: 100vw;
+      color: white;
+      background-color: black;
+      text-align: center;
+      font-weight: 700;
+      padding: 12px;
+      top: 32px;
     }
 
     .cs-icon {

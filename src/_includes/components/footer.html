@@ -3,64 +3,17 @@
 <!-- ============================================ -->
 
 <footer id="footer">
-    <div class="container">
-        <div class="left-section">
-            <a href="/" class="cs-logo" aria-label="back to home" tabindex="2">
-                <img src="/assets/svgs/logo-white.svg" alt="" width="210" height="48" aria-hidden="true"
-                    decoding="async">
-            </a>
-            <p> Acreditamos que pequenas empresas merecem mais.</p>
-        </div>
-        <div class="right-section">
-            <div class="lists">
-                <ul>
-                    <li>
-                        <h2>Links Rápidos</h2>
-                    </li>
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/about">Sobre Nós</a>
-                    </li>
-                    <li>
-                        <a href="/about">Google Meu Negócio</a>
-                    </li>
-                    <li>
-                        <a href="/about">Análise de Performance</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <h2>Contato</h2>
-                    </li>
-                    <li>
-                        <a href="/contact">
-                            {{client.address.lineOne}}<br>
-                            {{client.address.lineTwo}}<br>
-                            {{client.address.city}}
-                            {{client.address.state}}
-                            {{client.address.zip}}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tel:{{client.phoneForTel}}">
-                            T:
-                            {{client.phoneFormatted}}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:{{client.email}}">Enviar email</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <div class="left-section">
+        <a href="/" class="cs-logo" aria-label="back to home" tabindex="2">
+            <img src="/assets/svgs/logo-white.svg" alt="" width="210" height="48" aria-hidden="true" decoding="async">
+        </a>
+        <p> Acreditamos que pequenas empresas merecem mais.</p>
     </div>
 
     <div class="credit">
         <span>Desenvolvido por </span>
         <a href="/" target="_blank" rel="noopener">Echo)))Digital</a>
         <span class="copyright">
-            Copyright {% year %} - Presente</span>
+            | Copyright {% year %} - Presente</span>
     </div>
 </footer>

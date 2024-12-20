@@ -1,7 +1,3 @@
-<!-- ============================================ -->
-<!--             Final Call to Action             -->
-<!-- ============================================ -->
-
 <section id="cta">
   <div class="container">
     <div>
@@ -19,48 +15,48 @@
     </div>
     <form id="cta-form">
       <label for="name">Nome</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        placeholder="Seu nome"
-        required
-      />
+      <input type="text" id="name" name="name" placeholder="Seu nome" required />
 
       <label for="email">Email</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Seu e-mail"
-        required
-      />
-
-      <label for="phone">Fone/WhatsApp</label>
-      <input
-        type="tel"
-        id="phone"
-        name="phone"
-        placeholder="+55 (XX) XXXXX-XXXX"
-        required
-      />
+      <input type="text" id="email" name="email" placeholder="Seu e-mail" required />
 
       <label for="website">Website</label>
-      <input
-        type="url"
-        id="website"
-        name="website"
-        placeholder="https://seusite.com"
-        required
-      />
+      <input type="text" id="website" name="website" placeholder="seusite.com" required />
 
-      <button
-        type="submit"
-        class="cs-button-transparent"
-        style="filter: invert()"
-      >
+      <button type="submit" id="submit-button" class="cs-button-transparent" disabled style="filter: invert()">
         Solicitar Avaliação Gratuita
       </button>
     </form>
   </div>
+  <script>
+    document.getElementById("cta-form").addEventListener("input", function () {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const website = document.getElementById("website").value.trim();
+
+      // Verifica se todos os campos obrigatórios estão preenchidos
+      const isFormValid = name && email && website;
+
+      // Habilita ou desabilita o botão com base na validação
+      document.getElementById("submit-button").disabled = !isFormValid;
+    });
+
+    document.getElementById("cta-form").addEventListener("submit", function (e) {
+      e.preventDefault(); // Evita o envio padrão do formulário
+
+      // Captura os valores dos campos do formulário
+      const name = encodeURIComponent(document.getElementById("name").value.trim());
+      const email = encodeURIComponent(document.getElementById("email").value.trim());
+      const website = encodeURIComponent(document.getElementById("website").value.trim());
+
+      // Texto da mensagem personalizada
+      const message = `Olá! Meu nome é ${name}. Gostaria de uma avaliação gratuita do meu site. O endereço é: ${website}. Meu e-mail para contato é: ${email}.`;
+
+      // Construção da URL do WhatsApp
+      const whatsappURL = `https://wa.me/555199111145?text=${message}`;
+
+      // Abre o WhatsApp em uma nova aba/janela
+      window.open(whatsappURL, "_blank");  // _blank ensures it opens in a new tab/window
+    });
+  </script>
 </section>
